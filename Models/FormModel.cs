@@ -8,12 +8,10 @@ namespace Lab3_test4.Models
 {
     public class FormModel
     {
-        [Display(Name = "Nazwa elementu")]
-[Required]
+        [Display(Name = "Imie")]
+        [Required]
         public string Name { get; set; }
-        [Display(Name = "Opis elementu")]
-        public string Description { get; set; }
-        [Display(Name = "Element widoczny?")]
-        public bool IsVisible { get; set; }
+        [Display(Name = "Ilosc powtorzen")]
+        public int IloscP { get; set; }
     }
 }

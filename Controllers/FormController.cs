@@ -22,11 +22,17 @@ namespace Lab3_test4.Controllers
         [HttpPost]
         public IActionResult Create(FormModel model)
         {
-            if (ModelState.IsValid)
+            if (model.IloscP >= 1 && model.IloscP <= 5)
             {
-                return View("Created", model);
+                if (ModelState.IsValid)
+                {
+                    return View("Created", model);
+                }
+                return View(model);
             }
-            return View(model);
+            else return View("Error", model);
+
+            
         }
     }
 }
